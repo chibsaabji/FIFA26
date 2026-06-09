@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
- assetsInclude: ['**/*.glb', '**/*.gltf']
+  base: '/FIFA26/',
+  assetsInclude: ['**/*.glb', '**/*.gltf']
 });
