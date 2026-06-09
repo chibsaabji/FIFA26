@@ -92,11 +92,11 @@ const loader = new GLTFLoader();
 loader.setDRACOLoader(dracoLoader);
 
 const textureLoader = new THREE.TextureLoader();
-const diffuseTex = textureLoader.load('/models/textures/Material_diffuse.jpeg');
+const diffuseTex = textureLoader.load(`${import.meta.env.BASE_URL}models/textures/Material_diffuse.jpeg`);
 diffuseTex.colorSpace = THREE.SRGBColorSpace;
 diffuseTex.flipY = false;
 
-loader.load('/models/scene.gltf', (gltf) => {
+loader.load(`${import.meta.env.BASE_URL}models/scene.gltf`, (gltf) => {
   const innerBall = gltf.scene;
 
   // Center the model so it rotates in place
@@ -359,7 +359,7 @@ const translations = {
     drag: "&harr; drag to spin",
     stats_eyebrow: "By The Numbers",
     stats_title: "THE STREETS<br>ARE ALIVE.",
-    stats_body: "From Tokyo to London, Lagos to NYC &mdash; ballers are running <span class=\"fifa-brand\"><img src=\"/trophy.svg\" class=\"trophy-icon\" alt=\"Trophy Icon\"> FIFA 26</span> games every single day.",
+    stats_body: `From Tokyo to London, Lagos to NYC &mdash; ballers are running <span class="fifa-brand"><img src="${import.meta.env.BASE_URL}trophy.svg" class="trophy-icon" alt="Trophy Icon"> FIFA 26</span> games every single day.`,
     stats_c1: "Active Courts",
     stats_c2: "Daily Matches",
     stats_c3: "Top Scorer",
@@ -408,7 +408,7 @@ const translations = {
     drag: "&harr; крутить",
     stats_eyebrow: "В цифрах",
     stats_title: "УЛИЦЫ<br>ЖИВУТ.",
-    stats_body: "От Токио до Лондона, от Лагоса до Нью-Йорка &mdash; игроки гоняют в <span class=\"fifa-brand\"><img src=\"/trophy.svg\" class=\"trophy-icon\" alt=\"Trophy Icon\"> FIFA 26</span> каждый день.",
+    stats_body: `От Токио до Лондона, от Лагоса до Нью-Йорка &mdash; игроки гоняют в <span class="fifa-brand"><img src="${import.meta.env.BASE_URL}trophy.svg" class="trophy-icon" alt="Trophy Icon"> FIFA 26</span> каждый день.`,
     stats_c1: "Площадки",
     stats_c2: "Матчи за день",
     stats_c3: "Бомбардир",
